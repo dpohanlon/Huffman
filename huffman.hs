@@ -24,7 +24,7 @@ main =  do
         print code
         print . encode $ text
         print . decode . encode $ text
-        print $ (decode . encode) text == text§
+        print $ (decode . encode) text == text
 
 entropy :: [Double] -> Double
 entropy ps = (-1) * sum (P.map (\p -> p * logBase 2 p) ps)
